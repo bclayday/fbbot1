@@ -6,6 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Dotenv::Railtie.load
+
+HOSTNAME = ENV['HOSTNAME']
+
 
 				# Auto-load /bot and its subdirectories
 				config.paths.add File.join("app", "bot"), glob: File.join("**","*.rb")

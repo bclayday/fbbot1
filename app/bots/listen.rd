@@ -6,10 +6,12 @@ Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["ACCESS_TOKEN"])
 # message.sent_at     # => 2016-04-22 21:30:36 +0200
 # message.text        # => 'Hello, bot!'
 Bot.on :message do |message|
-  Bot.deliver({
-    recipient: message.sender,
-    message: {
-      text: message.text
-    }
-  }, access_token: ENV["ACCESS_TOKEN"])
+  #Bot.deliver({
+    #recipient: message.sender,
+    #message: {
+      #text: message.text
+    #}
+  #}, access_token: ENV["ACCESS_TOKEN"])
+  puts "got your message!"
+
 end
